@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.mosuseoul.com)",
+      "WebFetch(domain:www.restaurant-mingles.com)",
+      "WebFetch(domain:www.jungsik.kr)"
+    ]
+  }
+}
