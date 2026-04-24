@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>H&amp;M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Welcome Screen -->
+  <section id="page-welcome" class="page active">
+    <div class="welcome-content">
+      <div class="welcome-tag">Seoul · Fine Dining</div>
+      <h1 class="restaurant-name">H<em>&amp;M</em></h1>
+      <p class="welcome-sub">미슐랭 가이드 선정 · Michelin Selected</p>
+      <div class="divider"></div>
+      <p class="welcome-desc">
+        A refined tasting experience rooted in the finest seasonal ingredients.<br />
+        <span class="ko">엄선된 제철 식재료로 완성하는 섬세한 테이스팅 경험.</span>
+      </p>
+      <div class="welcome-actions">
+        <button class="btn-primary" onclick="navigate('food')">Food Menu · 푸드 메뉴</button>
+        <button class="btn-secondary" onclick="navigate('drink')">Beverage Menu · 음료 메뉴</button>
+      </div>
+    </div>
+    <div class="welcome-footer">
+      <span>Please inform your server of any dietary requirements or allergies.</span><br />
+      <span class="ko">알레르기 및 식이 요건은 담당 서버에게 알려주시기 바랍니다.</span>
+    </div>
+  </section>
+
+  <!-- Food Menu -->
+  <section id="page-food" class="page">
+    <header class="menu-header">
+      <button class="back-btn" onclick="navigate('welcome')">← Back</button>
+      <div class="header-title">
+        <div class="menu-tag">Tasting Menu · 테이스팅 메뉴</div>
+        <h2>Food Menu</h2>
+      </div>
+      <button class="nav-btn" onclick="navigate('drink')">Beverage →</button>
+    </header>
+
+    <div class="menu-body">
+
+      <div class="course-section">
+        <div class="course-label">Amuse-Bouche</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Seasonal Bite <span class="ko">제철 한 입</span></h3>
+            <p>Chef's daily selection of one bite compositions · 셰프의 데일리 한 입 구성</p>
+          </div>
+          <div class="item-price">Complimentary</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Appetizer · 전채</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Hokkaido Scallop <span class="ko">홋카이도 가리비</span></h3>
+            <p>Cauliflower velouté, caviar, dill oil · 콜리플라워 벨루테, 캐비어, 딜 오일</p>
+            <div class="tags"><span>Gluten-Free</span></div>
+          </div>
+          <div class="item-price">38,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Foie Gras Torchon <span class="ko">푸아그라 토르숑</span></h3>
+            <p>Brioche, fig jam, aged balsamic · 브리오슈, 무화과 잼, 숙성 발사믹</p>
+          </div>
+          <div class="item-price">45,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Jeju Abalone <span class="ko">제주 전복</span></h3>
+            <p>Seaweed butter, radish, yuzu foam · 해초 버터, 무, 유자 폼</p>
+            <div class="tags"><span>Gluten-Free</span><span>Signature</span></div>
+          </div>
+          <div class="item-price">52,000</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Pasta & Risotto</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Black Truffle Tagliolini <span class="ko">블랙 트러플 탈리올리니</span></h3>
+            <p>Hand-cut pasta, Périgord truffle, aged Parmesan · 수제 생면, 페리고르 트러플, 숙성 파르미지아노</p>
+            <div class="tags"><span>Vegetarian</span></div>
+          </div>
+          <div class="item-price">62,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Lobster Risotto <span class="ko">랍스터 리소토</span></h3>
+            <p>Carnaroli rice, bisque, tarragon · 카르나롤리 쌀, 비스크, 타라곤</p>
+          </div>
+          <div class="item-price">68,000</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Main Course · 메인</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Wagyu Striploin <span class="ko">와규 스트립로인</span></h3>
+            <p>A5 Miyazaki, bone marrow jus, seasonal vegetables · A5 미야자키, 본 마로 쥬, 제철 채소</p>
+            <div class="tags"><span>Signature</span><span>Gluten-Free</span></div>
+          </div>
+          <div class="item-price">145,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Brittany Turbot <span class="ko">브르타뉴 터봇</span></h3>
+            <p>Beurre blanc, capers, lemon confit · 뵈르 블랑, 케이퍼, 레몬 콩피</p>
+            <div class="tags"><span>Gluten-Free</span></div>
+          </div>
+          <div class="item-price">98,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Duck Magret <span class="ko">덕 마그레</span></h3>
+            <p>Cherry jus, celeriac purée, crispy skin · 체리 쥬, 셀러리악 퓌레, 크리스피 껍질</p>
+          </div>
+          <div class="item-price">88,000</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Dessert · 디저트</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Valrhona Chocolate <span class="ko">발로나 초콜릿</span></h3>
+            <p>72% Guanaja mousse, praline, gold leaf · 72% 과나하 무스, 프랄리네, 금박</p>
+            <div class="tags"><span>Gluten-Free</span></div>
+          </div>
+          <div class="item-price">28,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Yuzu Soufflé <span class="ko">유자 수플레</span></h3>
+            <p>Warm soufflé, vanilla ice cream · 따뜻한 수플레, 바닐라 아이스크림</p>
+            <div class="tags"><span>Signature</span></div>
+          </div>
+          <div class="item-price">32,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Cheese Selection <span class="ko">치즈 셀렉션</span></h3>
+            <p>Seasonal French and European cheeses, condiments · 제철 프랑스 및 유럽 치즈, 컨디먼트</p>
+          </div>
+          <div class="item-price">42,000</div>
+        </div>
+      </div>
+
+      <div class="menu-note">
+        <p>All prices are in Korean Won (KRW) · VAT included · 모든 가격은 원화 기준이며 부가세가 포함되어 있습니다</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drink Menu -->
+  <section id="page-drink" class="page">
+    <header class="menu-header">
+      <button class="back-btn" onclick="navigate('welcome')">← Back</button>
+      <div class="header-title">
+        <div class="menu-tag">Beverage · 음료</div>
+        <h2>Beverage Menu</h2>
+      </div>
+      <button class="nav-btn" onclick="navigate('food')">Food →</button>
+    </header>
+
+    <div class="menu-body">
+
+      <div class="course-section">
+        <div class="course-label">Sparkling & White · 스파클링 & 화이트</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Krug Grande Cuvée <span class="ko">크룩 그랑 퀴베</span></h3>
+            <p>Champagne, France · 샴페인, 프랑스</p>
+          </div>
+          <div class="item-price">38,000 / gl</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Puligny-Montrachet <span class="ko">퓔리니 몽라셰</span></h3>
+            <p>Domaine Leflaive, Burgundy 2021 · 도멘 르플레브, 부르고뉴 2021</p>
+          </div>
+          <div class="item-price">28,000 / gl</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Sancerre Blanc <span class="ko">상세르 블랑</span></h3>
+            <p>Henri Bourgeois, Loire Valley 2022 · 앙리 부르주아, 루아르 밸리 2022</p>
+          </div>
+          <div class="item-price">22,000 / gl</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Red Wine · 레드 와인</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Château Margaux <span class="ko">샤토 마르고</span></h3>
+            <p>Margaux, Bordeaux 2018 · 마르고, 보르도 2018</p>
+            <div class="tags"><span>Reserve</span></div>
+          </div>
+          <div class="item-price">85,000 / gl</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Barolo DOCG <span class="ko">바롤로</span></h3>
+            <p>Giacomo Conterno, Piedmont 2019 · 자코모 콘테르노, 피에몬테 2019</p>
+          </div>
+          <div class="item-price">42,000 / gl</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Pinot Noir, Côte de Nuits <span class="ko">피노 누아, 코트 드 뉘</span></h3>
+            <p>Domaine Drouhin, Burgundy 2020 · 도멘 드루앙, 부르고뉴 2020</p>
+          </div>
+          <div class="item-price">35,000 / gl</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Cocktails · 칵테일</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Garden Negroni <span class="ko">가든 네그로니</span></h3>
+            <p>Botanist gin, Campari, house vermouth, rosemary · 보태니스트 진, 캄파리, 하우스 베르무트, 로즈마리</p>
+            <div class="tags"><span>Signature</span></div>
+          </div>
+          <div class="item-price">24,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Yuzu Martini <span class="ko">유자 마티니</span></h3>
+            <p>Ketel One vodka, yuzu, elderflower · 케텔 원 보드카, 유자, 엘더플라워</p>
+            <div class="tags"><span>Signature</span></div>
+          </div>
+          <div class="item-price">22,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Old Fashioned <span class="ko">올드 패션드</span></h3>
+            <p>Buffalo Trace bourbon, demerara, Angostura · 버팔로 트레이스, 데메라라, 앙고스투라</p>
+          </div>
+          <div class="item-price">22,000</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-label">Non-Alcoholic · 무알코올</div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>House Pairing <span class="ko">하우스 페어링</span></h3>
+            <p>Seasonal pressed juices, shrubs, and infusions · 제철 착즙 주스, 슈럽, 인퓨전</p>
+          </div>
+          <div class="item-price">18,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Still / Sparkling Water <span class="ko">생수 / 탄산수</span></h3>
+            <p>Evian · Badoit · 에비앙 · 바두아</p>
+          </div>
+          <div class="item-price">8,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <h3>Selection of Teas <span class="ko">차 셀렉션</span></h3>
+            <p>Mariage Frères loose-leaf selection · 마리아쥬 프레르 루즈 리프 셀렉션</p>
+          </div>
+          <div class="item-price">12,000</div>
+        </div>
+      </div>
+
+      <div class="menu-note">
+        <p>All prices are in Korean Won (KRW) · VAT included · 모든 가격은 원화 기준이며 부가세가 포함되어 있습니다</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
