@@ -6,10 +6,9 @@ function navigate(target) {
 
   const curtain = document.getElementById('curtain');
 
-  // Drop curtain from top
-  curtain.style.cssText = 'transform: translateY(-100%); transition: none;';
-  void curtain.offsetWidth;
-  curtain.style.cssText = 'transform: translateY(0); transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);';
+  // Gentle light bloom in
+  curtain.style.transition = 'opacity 0.45s ease';
+  curtain.style.opacity = '1';
 
   setTimeout(() => {
     // Switch page
@@ -17,18 +16,15 @@ function navigate(target) {
     const next = document.getElementById('page-' + target);
     next.classList.add('active');
 
-    // Reset scroll
     const body = next.querySelector('.menu-body');
     if (body) body.scrollTop = 0;
 
-    // Rise curtain downward
-    curtain.style.cssText = 'transform: translateY(0); transition: none;';
-    void curtain.offsetWidth;
-    curtain.style.cssText = 'transform: translateY(100%); transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);';
+    // Gentle light bloom out
+    curtain.style.transition = 'opacity 0.55s ease';
+    curtain.style.opacity = '0';
 
     setTimeout(() => {
-      curtain.style.cssText = 'transform: translateY(-100%); transition: none;';
       navigating = false;
     }, 580);
-  }, 580);
+  }, 460);
 }
